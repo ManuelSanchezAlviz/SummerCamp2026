@@ -1,65 +1,51 @@
-/* ==========================================
-   COLLÈGE DU LÉMAN
-   SUMMER CAMP 2026
-========================================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-/* ===========================
-   ACCORDIONS
-=========================== */
+    const accordions = document.querySelectorAll(".accordion");
 
-document.querySelectorAll(".accordion").forEach(button => {
+    accordions.forEach(button => {
 
-    button.addEventListener("click", function(){
+        button.addEventListener("click", function () {
 
-        this.classList.toggle("active");
+            this.classList.toggle("active");
 
-        const panel = this.nextElementSibling;
+            const panel = this.nextElementSibling;
 
-        if(panel.style.maxHeight){
+            if (panel.classList.contains("open")) {
 
-            panel.style.maxHeight = null;
+                panel.classList.remove("open");
 
-            panel.style.paddingTop = "0";
+                panel.style.maxHeight = null;
 
-            panel.style.paddingBottom = "0";
+            } else {
 
-        }else{
+                panel.classList.add("open");
 
-            panel.style.paddingTop = "15px";
+                panel.style.maxHeight = panel.scrollHeight + "px";
 
-            panel.style.paddingBottom = "20px";
+            }
 
-            panel.style.maxHeight = panel.scrollHeight + 40 + "px";
-
-        }
+        });
 
     });
 
 });
 
-/* ===========================
-   SEARCH (Home Page)
-=========================== */
+/* SEARCH */
 
 function searchCards(){
 
-    const search = document.getElementById("search");
+    const search=document.getElementById("search");
 
     if(!search) return;
 
-    const value = search.value.toLowerCase();
+    const value=search.value.toLowerCase();
 
     document.querySelectorAll(".card").forEach(card=>{
 
-        if(card.innerText.toLowerCase().includes(value)){
-
-            card.style.display="flex";
-
-        }else{
-
-            card.style.display="none";
-
-        }
+        card.style.display=
+        card.innerText.toLowerCase().includes(value)
+        ? "flex"
+        : "none";
 
     });
 
