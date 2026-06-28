@@ -1,7 +1,7 @@
-/* =====================================================
-   SUMMER CAMP 2026
-   Collège du Léman
-===================================================== */
+/*==================================================
+COLLÈGE DU LÉMAN
+SUMMER CAMP 2026
+==================================================*/
 
 *{
     margin:0;
@@ -9,156 +9,262 @@
     box-sizing:border-box;
 }
 
+:root{
+
+    --blue:#005A9C;
+    --lightBlue:#EAF4FC;
+    --dark:#1F2937;
+    --grey:#6B7280;
+    --white:#FFFFFF;
+    --background:#F5F7FA;
+    --green:#2E8B57;
+    --orange:#F59E0B;
+    --red:#DC2626;
+
+}
+
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#eef3f8;
-    color:#333;
-    line-height:1.6;
+
+    background:var(--background);
+
+    color:var(--dark);
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    line-height:1.7;
+
 }
 
-/* ===========================
-   HERO
-=========================== */
+/*==================================================
+HERO
+==================================================*/
 
 .hero{
-    background:linear-gradient(135deg,#003b73,#0077b6);
+
+    background:
+    linear-gradient(
+    135deg,
+    #004b8d,
+    #0b6fc6);
+
     color:white;
+
+    padding:80px 25px;
+
     text-align:center;
-    padding:70px 20px;
-    box-shadow:0 6px 20px rgba(0,0,0,.15);
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.15);
+
 }
 
 .hero h1{
-    font-size:3rem;
+
+    font-size:3.2rem;
+
     margin-bottom:10px;
+
+    font-weight:700;
+
 }
 
 .subtitle{
+
     font-size:1.3rem;
-    margin-bottom:15px;
-    opacity:.95;
+
+    opacity:.9;
+
+    margin-bottom:20px;
+
 }
 
 .welcome{
+
     max-width:700px;
+
     margin:auto;
-    font-size:1.05rem;
-    margin-bottom:30px;
+
+    font-size:18px;
+
 }
 
-/* ===========================
-   SEARCH
-=========================== */
+/*==================================================
+SEARCH
+==================================================*/
 
 #search{
+
+    margin-top:35px;
+
     width:100%;
-    max-width:550px;
-    padding:16px 22px;
+
+    max-width:650px;
+
+    padding:18px 22px;
+
     border:none;
-    border-radius:40px;
+
     outline:none;
-    font-size:16px;
-    box-shadow:0 6px 18px rgba(0,0,0,.18);
-}
 
-/* ===========================
-   MAIN
-=========================== */
+    border-radius:50px;
 
-main{
-    width:92%;
-    max-width:950px;
-    margin:50px auto;
-}
-
-/* ===========================
-   SECTIONS
-=========================== */
-
-.section{
-    margin-bottom:25px;
-}
-
-/* ===========================
-   ACCORDIONS
-=========================== */
-
-.accordion{
-    width:100%;
-    border:none;
-    cursor:pointer;
-    outline:none;
-    text-align:left;
-    transition:.3s;
-}
-
-/* Main accordion */
-
-.accordion.main{
+    font-size:17px;
 
     background:white;
 
-    padding:22px 26px;
+    box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+#search:focus{
+
+    transform:scale(1.02);
+
+}
+
+/*==================================================
+MAIN
+==================================================*/
+
+main{
+
+    width:92%;
+
+    max-width:1050px;
+
+    margin:auto;
+
+    padding:50px 0;
+
+}
+
+/*==================================================
+SECTION
+==================================================*/
+
+.section{
+
+    margin-bottom:22px;
+
+}
+/*==================================================
+MAIN ACCORDIONS
+==================================================*/
+
+.accordion{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:.35s ease;
+
+    text-align:left;
+
+}
+
+/* Main cards */
+
+.accordion.main{
+
+    background:var(--white);
+
+    color:var(--dark);
 
     font-size:22px;
 
-    font-weight:bold;
+    font-weight:700;
+
+    padding:22px 28px;
 
     border-radius:18px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    box-shadow:
+    0 8px 24px rgba(0,0,0,.08);
+
+    margin-bottom:8px;
 
 }
 
 .accordion.main:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
-}
-
-/* Sub accordion */
-
-.accordion.sub{
-
-    background:#f7f9fc;
-
-    margin-top:14px;
-
-    padding:18px 20px;
-
-    border-left:6px solid #0077b6;
-
-    border-radius:12px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-}
-
-.accordion.sub:hover{
-
-    background:#edf5fb;
+    box-shadow:
+    0 14px 35px rgba(0,0,0,.15);
 
 }
 
 /* Active */
 
-.accordion.active{
+.accordion.main.active{
 
-    background:#0077b6;
+    background:var(--blue);
 
     color:white;
 
 }
 
-/* ===========================
-   PANELS
-=========================== */
+/*==================================================
+SUB ACCORDIONS
+==================================================*/
+
+.accordion.sub{
+
+    background:#f9fbfd;
+
+    color:var(--dark);
+
+    margin-top:15px;
+
+    padding:18px 22px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    border-left:6px solid var(--blue);
+
+    border-radius:14px;
+
+}
+
+.accordion.sub:hover{
+
+    background:var(--lightBlue);
+
+}
+
+.accordion.sub.active{
+
+    background:var(--blue);
+
+    color:white;
+
+}
+
+/*==================================================
+PANELS
+==================================================*/
 
 .panel{
 
@@ -166,11 +272,13 @@ main{
 
     overflow:hidden;
 
-    transition:max-height .4s ease;
+    transition:
+    max-height .45s ease,
+    padding .35s ease;
+
+    padding:0 22px;
 
     background:white;
-
-    padding:0 20px;
 
 }
 
@@ -178,27 +286,168 @@ main{
 
     margin:18px 0;
 
+    color:#444;
+
 }
 
 .panel ul{
 
-    margin:18px 20px;
+    margin:18px 25px;
 
 }
 
 .panel li{
 
-    margin:10px 0;
+    margin:12px 0;
 
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/*==================================================
+LISTS
+==================================================*/
+
+.panel li::marker{
+
+    color:var(--blue);
+
+}
+
+/*==================================================
+LINKS
+==================================================*/
+
+a{
+
+    color:var(--blue);
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*==================================================
+SMALL EMPHASIS
+==================================================*/
+
+strong{
+
+    color:var(--blue);
+
+}
+
+b{
+
+    color:var(--blue);
+
+}
+/*==================================================
+SECTION COLOURS
+==================================================*/
+
+.section:nth-child(1) .accordion.main{
+    border-left:8px solid #f59e0b;
+}
+
+.section:nth-child(2) .accordion.main{
+    border-left:8px solid #2563eb;
+}
+
+.section:nth-child(3) .accordion.main{
+    border-left:8px solid #7c3aed;
+}
+
+.section:nth-child(4) .accordion.main{
+    border-left:8px solid #ea580c;
+}
+
+.section:nth-child(5) .accordion.main{
+    border-left:8px solid #10b981;
+}
+
+.section:nth-child(6) .accordion.main{
+    border-left:8px solid #14b8a6;
+}
+
+.section:nth-child(7) .accordion.main{
+    border-left:8px solid #f43f5e;
+}
+
+.section:nth-child(8) .accordion.main{
+    border-left:8px solid #6366f1;
+}
+
+/*==================================================
+SMOOTH ANIMATION
+==================================================*/
+
+.section{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef3f8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#005A9C;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#003b73;
+
+}
+
+/*==================================================
+FOOTER
+==================================================*/
 
 footer{
 
-    margin-top:60px;
+    margin-top:70px;
 
     background:#003b73;
 
@@ -206,47 +455,49 @@ footer{
 
     text-align:center;
 
-    padding:35px;
+    padding:40px 20px;
 
     font-size:15px;
 
+    line-height:1.8;
+
 }
 
-/* ===========================
-   MOBILE
-=========================== */
+/*==================================================
+MOBILE
+==================================================*/
 
-@media(max-width:768px){
+@media (max-width:900px){
 
 .hero{
 
-    padding:55px 18px;
+    padding:60px 20px;
 
 }
 
 .hero h1{
 
-    font-size:2.2rem;
+    font-size:2.4rem;
 
 }
 
 .subtitle{
 
-    font-size:1rem;
+    font-size:1.1rem;
 
 }
 
 .welcome{
 
-    font-size:.95rem;
+    font-size:16px;
 
 }
 
 .accordion.main{
 
-    font-size:18px;
+    font-size:19px;
 
-    padding:18px;
+    padding:20px;
 
 }
 
@@ -258,10 +509,62 @@ footer{
 
 }
 
+.panel{
+
+    padding:0 16px;
+
+}
+
+.panel ul{
+
+    margin-left:20px;
+
+}
+
 #search{
+
+    font-size:16px;
+
+    padding:16px;
+
+}
+
+}
+
+@media (max-width:600px){
+
+.hero h1{
+
+    font-size:2rem;
+
+}
+
+.subtitle{
+
+    font-size:1rem;
+
+}
+
+.welcome{
+
+    font-size:15px;
+
+}
+
+.accordion.main{
+
+    font-size:17px;
+
+}
+
+.accordion.sub{
 
     font-size:15px;
 
 }
 
 }
+
+/*==================================================
+END
+==================================================*/
