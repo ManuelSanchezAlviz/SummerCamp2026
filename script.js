@@ -1,26 +1,18 @@
-// Accordion
-const accordions = document.querySelectorAll(".accordion");
+/* ==========================================
+   COLLÈGE DU LÉMAN
+   SUMMER CAMP 2026
+========================================== */
 
-accordions.forEach(button => {
-    button.addEventListener("click", function () {
+// ===============================
+// SEARCH CARDS
+// ===============================
 
-        this.classList.toggle("active");
+function searchCards() {
 
-        const panel = this.nextElementSibling;
-
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-
-    });
-});
-
-// Search
-function searchSections() {
-
-    const input = document.getElementById("search").value.toLowerCase();
+    const input = document
+        .getElementById("search")
+        .value
+        .toLowerCase();
 
     const cards = document.querySelectorAll(".card");
 
@@ -29,11 +21,75 @@ function searchSections() {
         const text = card.innerText.toLowerCase();
 
         if (text.includes(input)) {
-            card.style.display = "block";
+
+            card.style.display = "flex";
+
         } else {
+
             card.style.display = "none";
+
         }
 
     });
 
 }
+
+// ===============================
+// CARD ANIMATION
+// ===============================
+
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+cards.forEach(card => observer.observe(card));
+
+// ===============================
+// SMOOTH SCROLL
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+// ===============================
+// PAGE LOADED
+// ===============================
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
