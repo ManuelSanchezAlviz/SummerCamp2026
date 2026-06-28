@@ -272,13 +272,13 @@ PANELS
 
     overflow:hidden;
 
-    transition:
-    max-height .45s ease,
-    padding .35s ease;
+    transition:max-height .4s ease;
+
+    background:white;
 
     padding:0 22px;
 
-    background:white;
+}
 
 }
 
