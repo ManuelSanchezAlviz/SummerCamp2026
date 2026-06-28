@@ -3,272 +3,77 @@
    Collège du Léman
 ===================================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+// ACCORDIONS
 
-html{
-    scroll-behavior:smooth;
-}
+document.querySelectorAll(".accordion").forEach(button => {
 
-body{
+    button.addEventListener("click", function () {
 
-    font-family:Arial, Helvetica, sans-serif;
+        this.classList.toggle("active");
 
-    background:#eef3f8;
+        const panel = this.nextElementSibling;
 
-    color:#333;
+        if (!panel) return;
 
-    line-height:1.6;
+        if (panel.style.maxHeight) {
 
-}
+            panel.style.maxHeight = null;
+            panel.style.paddingTop = "0";
+            panel.style.paddingBottom = "0";
 
-/* HERO */
+        } else {
 
-.hero{
+            panel.style.paddingTop = "10px";
+            panel.style.paddingBottom = "15px";
+            panel.style.maxHeight = panel.scrollHeight + 40 + "px";
 
-    background:linear-gradient(135deg,#003b73,#0077b6);
+        }
 
-    color:white;
+    });
 
-    text-align:center;
+});
 
-    padding:70px 20px;
 
-    box-shadow:0 6px 20px rgba(0,0,0,.15);
+// SEARCH
 
-}
+function searchSections() {
 
-.hero h1{
+    const input = document
+        .getElementById("search")
+        .value
+        .toLowerCase();
 
-    font-size:3rem;
+    const sections = document.querySelectorAll(".section");
 
-    margin-bottom:10px;
+    sections.forEach(section => {
 
-}
+        const text = section.innerText.toLowerCase();
 
-.subtitle{
+        if (text.includes(input)) {
 
-    font-size:1.3rem;
+            section.style.display = "block";
 
-    opacity:.95;
+        } else {
 
-    margin-bottom:15px;
+            section.style.display = "none";
 
-}
+        }
 
-.welcome{
-
-    max-width:700px;
-
-    margin:auto;
-
-    font-size:1.05rem;
+    });
 
 }
 
-/* SEARCH */
 
-#search{
+// OPEN FIRST SECTION AUTOMATICALLY
 
-    margin-top:35px;
+window.onload = function () {
 
-    width:100%;
+    const first = document.querySelector(".accordion.main");
 
-    max-width:550px;
+    if(first){
 
-    padding:16px 22px;
+        first.click();
 
-    border-radius:40px;
+    }
 
-    border:none;
-
-    font-size:16px;
-
-    outline:none;
-
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
-
-}
-
-/* MAIN */
-
-main{
-
-    width:92%;
-
-    max-width:950px;
-
-    margin:50px auto;
-
-}
-
-/* MAIN CARD */
-
-.section{
-
-    margin-bottom:22px;
-
-}
-
-/* ACCORDION */
-
-.accordion{
-
-    width:100%;
-
-    cursor:pointer;
-
-    border:none;
-
-    outline:none;
-
-    text-align:left;
-
-    transition:.3s;
-
-}
-
-/* MAIN */
-
-.accordion.main{
-
-    background:white;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    padding:22px 26px;
-
-    border-radius:18px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.accordion.main:hover{
-
-    transform:translateY(-2px);
-
-}
-
-/* SUB */
-
-.accordion.sub{
-
-    background:#f5f8fb;
-
-    margin-top:14px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    border-left:6px solid #0077b6;
-
-    padding:18px 20px;
-
-    border-radius:12px;
-
-}
-
-/* ACTIVE */
-
-.accordion.active{
-
-    background:#0077b6;
-
-    color:white;
-
-}
-
-/* PANELS */
-
-.panel{
-
-    display:none;
-
-    overflow:hidden;
-
-    background:white;
-
-    padding:0 18px;
-
-}
-
-.panel p{
-
-    margin:18px 0;
-
-}
-
-.panel ul{
-
-    margin:15px 25px;
-
-}
-
-.panel li{
-
-    margin:10px 0;
-
-}
-
-/* FOOTER */
-
-footer{
-
-    margin-top:60px;
-
-    padding:35px;
-
-    background:#003b73;
-
-    color:white;
-
-    text-align:center;
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero{
-
-padding:50px 15px;
-
-}
-
-.hero h1{
-
-font-size:2.2rem;
-
-}
-
-.subtitle{
-
-font-size:1rem;
-
-}
-
-.accordion.main{
-
-font-size:18px;
-
-padding:18px;
-
-}
-
-.accordion.sub{
-
-font-size:16px;
-
-padding:16px;
-
-}
-
-}
+};
