@@ -596,6 +596,45 @@ transform:translateY(-2px);
 background:#EAF4FC;
 
 }
+/* ==========================================
+MEAL TABLE
+========================================== */
+
+.meal-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:15px;
+
+}
+
+.meal-table th{
+
+background:#005A9C;
+
+color:white;
+
+padding:14px;
+
+}
+
+.meal-table td{
+
+padding:14px;
+
+border-bottom:1px solid #ddd;
+
+background:white;
+
+}
+
+.meal-table tr:hover td{
+
+background:#f3f9ff;
+
+}
 
 /*==================================================
 END
