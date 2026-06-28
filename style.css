@@ -3,77 +3,265 @@
    Collège du Léman
 ===================================================== */
 
-// ACCORDIONS
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-document.querySelectorAll(".accordion").forEach(button => {
+html{
+    scroll-behavior:smooth;
+}
 
-    button.addEventListener("click", function () {
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f8;
+    color:#333;
+    line-height:1.6;
+}
 
-        this.classList.toggle("active");
+/* ===========================
+   HERO
+=========================== */
 
-        const panel = this.nextElementSibling;
+.hero{
+    background:linear-gradient(135deg,#003b73,#0077b6);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.15);
+}
 
-        if (!panel) return;
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
 
-        if (panel.style.maxHeight) {
+.subtitle{
+    font-size:1.3rem;
+    margin-bottom:15px;
+    opacity:.95;
+}
 
-            panel.style.maxHeight = null;
-            panel.style.paddingTop = "0";
-            panel.style.paddingBottom = "0";
+.welcome{
+    max-width:700px;
+    margin:auto;
+    font-size:1.05rem;
+    margin-bottom:30px;
+}
 
-        } else {
+/* ===========================
+   SEARCH
+=========================== */
 
-            panel.style.paddingTop = "10px";
-            panel.style.paddingBottom = "15px";
-            panel.style.maxHeight = panel.scrollHeight + 40 + "px";
+#search{
+    width:100%;
+    max-width:550px;
+    padding:16px 22px;
+    border:none;
+    border-radius:40px;
+    outline:none;
+    font-size:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
 
-        }
+/* ===========================
+   MAIN
+=========================== */
 
-    });
+main{
+    width:92%;
+    max-width:950px;
+    margin:50px auto;
+}
 
-});
+/* ===========================
+   SECTIONS
+=========================== */
 
+.section{
+    margin-bottom:25px;
+}
 
-// SEARCH
+/* ===========================
+   ACCORDIONS
+=========================== */
 
-function searchSections() {
+.accordion{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    text-align:left;
+    transition:.3s;
+}
 
-    const input = document
-        .getElementById("search")
-        .value
-        .toLowerCase();
+/* Main accordion */
 
-    const sections = document.querySelectorAll(".section");
+.accordion.main{
 
-    sections.forEach(section => {
+    background:white;
 
-        const text = section.innerText.toLowerCase();
+    padding:22px 26px;
 
-        if (text.includes(input)) {
+    font-size:22px;
 
-            section.style.display = "block";
+    font-weight:bold;
 
-        } else {
+    border-radius:18px;
 
-            section.style.display = "none";
-
-        }
-
-    });
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 }
 
+.accordion.main:hover{
 
-// OPEN FIRST SECTION AUTOMATICALLY
+    transform:translateY(-2px);
 
-window.onload = function () {
+}
 
-    const first = document.querySelector(".accordion.main");
+/* Sub accordion */
 
-    if(first){
+.accordion.sub{
 
-        first.click();
+    background:#f7f9fc;
 
-    }
+    margin-top:14px;
 
-};
+    padding:18px 20px;
+
+    border-left:6px solid #0077b6;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.accordion.sub:hover{
+
+    background:#edf5fb;
+
+}
+
+/* Active */
+
+.accordion.active{
+
+    background:#0077b6;
+
+    color:white;
+
+}
+
+/* ===========================
+   PANELS
+=========================== */
+
+.panel{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+    background:white;
+
+    padding:0 20px;
+
+}
+
+.panel p{
+
+    margin:18px 0;
+
+}
+
+.panel ul{
+
+    margin:18px 20px;
+
+}
+
+.panel li{
+
+    margin:10px 0;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:60px;
+
+    background:#003b73;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+    padding:55px 18px;
+
+}
+
+.hero h1{
+
+    font-size:2.2rem;
+
+}
+
+.subtitle{
+
+    font-size:1rem;
+
+}
+
+.welcome{
+
+    font-size:.95rem;
+
+}
+
+.accordion.main{
+
+    font-size:18px;
+
+    padding:18px;
+
+}
+
+.accordion.sub{
+
+    font-size:16px;
+
+    padding:16px;
+
+}
+
+#search{
+
+    font-size:15px;
+
+}
+
+}
