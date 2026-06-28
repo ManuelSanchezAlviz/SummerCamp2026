@@ -2,634 +2,362 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summer Camp 2026 | Collège du Léman</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Collège du Léman
+Summer Camp 2026
+
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
 </head>
 
 <body>
 
 <header class="hero">
 
-    <h1>🏕 Summer Camp 2026</h1>
+<div class="hero-content">
 
-    <p class="subtitle">
-        Interactive Student Handbook
-    </p>
+<h1>
 
-    <p class="welcome">
-        Everything you need to know during your stay at
-        <strong>Collège du Léman</strong>.
-    </p>
+🏕 Summer Camp 2026
 
-    <input
-        type="text"
-        id="search"
-        placeholder="🔍 Search the handbook..."
-        onkeyup="searchSections()">
+</h1>
+
+<p class="subtitle">
+
+Collège du Léman
+
+</p>
+
+<p class="welcome">
+
+Welcome!
+
+We are delighted to have you with us.
+
+This interactive handbook contains everything you need to enjoy a safe, exciting and unforgettable Summer Camp experience.
+
+</p>
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search the handbook..."
+onkeyup="searchCards()">
+
+</div>
 
 </header>
 
 <main>
 
-<!-- ====================================================== -->
-<!-- MISSION -->
-<!-- ====================================================== -->
+<section class="quick">
 
-<section class="section">
+<h2>
 
-<button class="accordion main">
+Quick Access
 
-🎯 Mission Statement
+</h2>
 
-</button>
+<div class="cards">
+    <!-- CAMPUS -->
 
-<div class="panel">
+<a href="campus.html" class="card">
 
-<p>
+    <div class="emoji">🏫</div>
 
-We are here to have fun.
+    <h3>Campus & Safety</h3>
 
-However, we also need to follow and respect some rules to ensure everyone enjoys a safe, respectful and memorable Summer Camp experience.
+    <p>
+        Campus rules, fire alarm, lockdown procedures,
+        security and room expectations.
+    </p>
 
-</p>
+    <span class="open">
 
-</div>
+        Explore →
 
-</section>
+    </span>
 
-<!-- ====================================================== -->
-<!-- CAMPUS -->
-<!-- ====================================================== -->
+</a>
 
-<section class="section">
+<!-- DEVICES -->
 
-<button class="accordion main">
+<a href="devices.html" class="card">
 
-🏫 Campus & Safety
+    <div class="emoji">📱</div>
 
-</button>
+    <h3>Electronic Devices</h3>
 
-<div class="panel">
+    <p>
+        Mobile phones, bedtime collection,
+        electrical appliances and technology rules.
+    </p>
 
-<!-- Leaving Campus -->
+    <span class="open">
 
-<button class="accordion sub">
+        Explore →
 
-🚶 Leaving Campus
+    </span>
 
-</button>
+</a>
 
-<div class="panel">
-
-<p>
-
-Students must not leave the Boarding Houses or the campus without permission and supervision from a member of staff.
-
-</p>
-
-<p>
-
-Visits to the shops in Versoix can be arranged with the House Parent(s) on duty.
-
-</p>
-
-</div>
-
-<!-- Litter -->
-
-<button class="accordion sub">
-
-🗑️ Litter
-
-</button>
-
-<div class="panel">
-
-<p>
-
-Always use the litter bins provided and help keep the Boarding Houses and campus clean.
-
-</p>
-
-</div>
-
-<!-- Room -->
-
-<button class="accordion sub">
-
-🛏️ Room Tidiness
-
-</button>
-
-<div class="panel">
-
-<p>
-
-Keep your room tidy and presentable every morning so that the cleaning staff can carry out their work.
-
-</p>
-
-</div>
-
-<!-- Smoking -->
-
-<button class="accordion sub">
-
-🚭 Smoking, Alcohol & Drugs
-
-</button>
-
-<div class="panel">
-
-<p>
-
-Smoking, vaping, drinking alcohol and the use or possession of illegal drugs are strictly prohibited.
-
-</p>
-
-<p>
-
-Only prescribed medication is permitted and must be declared to the Summer Camp staff on arrival.
-
-</p>
-
-</div>
-
-<!-- Alarm -->
-
-<button class="accordion sub">
-
-🚨 Security Alarm
-
-</button>
-
-<div class="panel">
-
-<p>
-
-The Boarding House alarm is activated every night.
-
-</p>
-
-<p>
-
-Once the alarm is set, do not open any doors or windows unless instructed by a member of staff.
-
-</p>
-
-</div>
-
-<!-- Panic -->
-
-<button class="accordion sub">
-
-🔴 Panic Button
-
-</button>
-
-<div class="panel">
-
-<p>
-
-The panic button must only be used in a genuine emergency, such as if an intruder is seen inside the Boarding House.
-
-</p>
-
-<p>
-
-Misuse of the panic button is strictly prohibited.
-
-</p>
-
-</div>
-
-<!-- Fire -->
-
-<button class="accordion sub">
-
-🔥 Fire Alarm
-
-</button>
-
-<div class="panel">
-
-<p>
-
-If you hear the fire alarm, remain calm and leave the Boarding House immediately.
-
-</p>
-
-<p>
-
-Follow staff instructions and proceed directly to the designated assembly point.
-
-</p>
-
-</div>
-
-<!-- Lockdown -->
-
-<button class="accordion sub">
-
-🔒 Lockdown
-
-</button>
-
-<div class="panel">
-
-<p>
-
-<b>Code message:</b>
-
-<br><br>
-
-LE BUS DE LAUSANNE EST EN RETARD
-
-</p>
-
-<p>
-
-Stay calm.
-
-Follow staff instructions immediately.
-
-If you are inside a building, remain in a safe place.
-
-If you are outside, move away from danger and hide safely until instructed otherwise.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- ELECTRONIC DEVICES -->
-<!-- ====================================================== -->
-
-<section class="section">
-
-<button class="accordion main">
-📱 Electronic Devices
-</button>
-
-<div class="panel">
-
-<button class="accordion sub">
-📵 During Activities
-</button>
-
-<div class="panel">
-<p>Mobile devices must not be used during activities unless permission has been given by a member of staff.</p>
-<p>If a mobile device is used without permission, the Activity Leaders will confiscate it for the remainder of the activity.</p>
-</div>
-
-<button class="accordion sub">
-🌙 Bedtime Device Collection
-</button>
-
-<div class="panel">
-<p>Students aged <strong>14 and under</strong> must hand in their electronic devices at bedtime.</p>
-<p>House Parents may also require any student to hand in their devices if they are being misused.</p>
-</div>
-
-<button class="accordion sub">
-🍽️ Phone Use During Meals
-</button>
-
-<div class="panel">
-<p>Mobile phones must not be used to make or receive calls during meals.</p>
-<p>Unauthorised use may result in disciplinary action.</p>
-</div>
-
-<button class="accordion sub">
-🔌 Electrical Appliances
-</button>
-
-<div class="panel">
-<p>The following items are not permitted in student rooms:</p>
-
-<ul>
-<li>Heaters</li>
-<li>Cooking appliances</li>
-<li>Refrigerators</li>
-<li>Televisions</li>
-<li>Sun lamps</li>
-</ul>
-
-</div>
-
-<button class="accordion sub">
-🚌 Off-Campus Activities
-</button>
-
-<div class="panel">
-<p>Electronic devices may be taken on off-campus activities for safety and emergency communication.</p>
-<p>They must not be used during activities unless permission has been given by a member of staff.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ====================================================== -->
 <!-- MEALS -->
-<!-- ====================================================== -->
 
-<section class="section">
+<a href="meals.html" class="card">
 
-<button class="accordion main">
-🍽️ Meals
-</button>
+    <div class="emoji">🍽️</div>
 
-<div class="panel">
+    <h3>Meals</h3>
 
-<button class="accordion sub">
-🍴 Meal Attendance
-</button>
+    <p>
+        Meal attendance,
+        meal times,
+        kitchen use
+        and takeaways.
+    </p>
 
-<div class="panel">
-<p>Students are expected to attend all scheduled meals during their stay.</p>
-<p>House Parents monitor students' wellbeing, including eating habits and activity levels.</p>
-</div>
+    <span class="open">
 
-<button class="accordion sub">
-⏰ Meal Times
-</button>
+        Explore →
 
-<div class="panel">
+    </span>
 
-<ul>
-<li>🍳 Breakfast: <strong>08:00 – 08:45</strong></li>
-<li>🥪 Lunch: <strong>12:30 – 13:00</strong></li>
-<li>🍝 Dinner: <strong>18:30 – 19:00</strong></li>
-</ul>
+</a>
 
-</div>
+<!-- CAFE -->
 
-<button class="accordion sub">
-🚫 Takeaways
-</button>
+<a href="cafe.html" class="card">
 
-<div class="panel">
-<p>Ordering takeaway food is not permitted.</p>
-</div>
+    <div class="emoji">☕</div>
 
-<button class="accordion sub">
-☕ Kitchen Use
-</button>
+    <h3>Panthers Café</h3>
 
-<div class="panel">
-<p>Students may use:</p>
+    <p>
+        Snacks,
+        drinks,
+        opening hours
+        and daily information.
+    </p>
 
-<ul>
-<li>Kettle</li>
-<li>Toaster</li>
-<li>Microwave</li>
-<li>Refrigerator</li>
-</ul>
+    <span class="open">
 
-<p>The use of stoves is not permitted.</p>
+        Explore →
 
-</div>
+    </span>
 
-</div>
+</a>
 
-</section>
+<!-- HEALTH -->
 
-<!-- ====================================================== -->
-<!-- PANTHERS CAFE -->
-<!-- ====================================================== -->
+<a href="health.html" class="card">
 
-<section class="section">
+    <div class="emoji">🩺</div>
 
-<button class="accordion main">
-☕ Panthers Café
-</button>
+    <h3>Health Centre</h3>
 
-<div class="panel">
+    <p>
+        Medical support,
+        nurses,
+        illness procedure
+        and emergencies.
+    </p>
 
-<p><strong>Opening Hours</strong></p>
+    <span class="open">
 
-<p>🥤 Daily from <strong>15:15 to 16:15</strong>.</p>
+        Explore →
 
-<p>Snacks and drinks are available during this time.</p>
+    </span>
 
-</div>
+</a>
 
-</section>
-
-<!-- ====================================================== -->
-<!-- ====================================================== -->
-<!-- POCKET MONEY -->
-<!-- ====================================================== -->
-
-<section class="section">
-
-<button class="accordion main">
-💳 Pocket Money
-</button>
-
-<div class="panel">
-
-<button class="accordion sub">
-💰 Withdrawals
-</button>
-
-<div class="panel">
-
-<p>
-Pocket money can be withdrawn every <strong>Monday, Wednesday and Friday</strong> during the scheduled breaks.
-</p>
-
-<p>
-Students must bring their <strong>student ID card</strong> to collect their pocket money.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ====================================================== -->
-<!-- HEALTH CENTRE -->
-<!-- ====================================================== -->
-
-<section class="section">
-
-<button class="accordion main">
-🩺 Health Centre
-</button>
-
-<div class="panel">
-
-<button class="accordion sub">
-👩‍⚕️ Medical Support
-</button>
-
-<div class="panel">
-
-<p>
-A nurse is available on campus <strong>Monday to Friday, from 08:30 to 17:30</strong>.
-</p>
-
-<p>
-If you feel unwell, please inform your House Parent or an Activity Leader before visiting the Health Centre.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ====================================================== -->
 <!-- LAUNDRY -->
-<!-- ====================================================== -->
 
-<section class="section">
+<a href="laundry.html" class="card">
 
-<button class="accordion main">
-🧺 Laundry
-</button>
+    <div class="emoji">🧺</div>
 
-<div class="panel">
+    <h3>Laundry</h3>
 
-<button class="accordion sub">
-🧼 Washing Facilities
-</button>
+    <p>
+        Washing machines,
+        dryers
+        and useful information.
+    </p>
 
-<div class="panel">
+    <span class="open">
 
-<p>
-Each Boarding House is equipped with washing machines and dryers for student use.
-</p>
+        Explore →
 
-</div>
+    </span>
 
-</div>
+</a>
 
-</section>
+<!-- MONEY -->
 
-<!-- ====================================================== -->
-<!-- CODE OF CONDUCT -->
-<!-- ====================================================== -->
+<a href="money.html" class="card">
 
-<section class="section">
+    <div class="emoji">💳</div>
 
-<button class="accordion main">
-🤝 Code of Conduct
-</button>
+    <h3>Pocket Money</h3>
 
-<div class="panel">
+    <p>
+        Collection days,
+        opening times
+        and student ID requirements.
+    </p>
 
-<button class="accordion sub">
-🌍 Living in an International Community
-</button>
+    <span class="open">
 
-<div class="panel">
+        Explore →
 
-<p>
-Collège du Léman Summer Camp brings together students from all over the world.
-</p>
+    </span>
 
-<p>
-We celebrate our diversity and believe that every culture, language and background enriches our community.
-</p>
+</a>
 
-<p>
-We ask every student to embrace this international spirit by showing curiosity, kindness and respect towards others.
-</p>
+<!-- CONDUCT -->
 
-</div>
+<a href="conduct.html" class="card">
 
-<button class="accordion sub">
-🌟 Our Expectations
-</button>
+    <div class="emoji">🤝</div>
 
-<div class="panel">
+    <h3>Code of Conduct</h3>
 
-<ul>
+    <p>
+        Respect,
+        inclusion,
+        multiculturalism
+        and expectations.
+    </p>
 
-<li>🤝 Treat everyone with kindness, respect and courtesy.</li>
+    <span class="open">
 
-<li>🌍 Appreciate and respect different cultures, languages, beliefs and traditions.</li>
+        Explore →
 
-<li>❤️ Be open-minded and inclusive, making everyone feel welcome.</li>
+    </span>
 
-<li>🇬🇧🇫🇷 Embrace our bilingual environment by respecting both English and French.</li>
-
-<li>👨‍🏫 Follow the instructions of House Parents, Activity Leaders and all members of staff.</li>
-
-<li>🏠 Respect the rights, privacy and property of others.</li>
-
-<li>😴 Respect the sleep and wellbeing of others by keeping noise to a minimum during quiet hours.</li>
-
-<li>🛡️ Behave responsibly and make safe choices at all times.</li>
-
-<li>⏰ Be punctual and attend all scheduled activities and meals.</li>
-
-<li>🧹 Help maintain a clean and welcoming environment.</li>
-
-<li>🏕️ Represent yourself and Collège du Léman positively both on and off campus.</li>
-
-<li>🚫 Bullying, intimidation, discrimination and harassment will not be tolerated.</li>
-
-</ul>
-
-</div>
-
-<button class="accordion sub">
-❤️ Our Community
-</button>
-
-<div class="panel">
-
-<p>
-Every student plays an important role in creating a friendly, inclusive and supportive community.
-</p>
-
-<p>
-By respecting one another and celebrating our differences, we ensure that Summer Camp is a positive experience for everyone.
-</p>
-
-</div>
-
-<button class="accordion sub">
-⚠️ Consequences
-</button>
-
-<div class="panel">
-
-<p>
-Failure to follow the Code of Conduct may result in disciplinary action, including the loss of privileges or, in serious cases, dismissal from the Summer Camp.
-</p>
-
-</div>
-
+</a>
 </div>
 
 </section>
 
-</main>
+<!-- =======================================
+EMERGENCY INFORMATION
+======================================= -->
+
+<section class="info-section">
+
+    <h2>🚨 Emergency Information</h2>
+
+    <div class="info-grid">
+
+        <div class="info-box emergency">
+            <div class="emoji">🔥</div>
+            <h3>Fire Alarm</h3>
+            <p>
+                Leave the building immediately and proceed to the designated assembly point. Follow all staff instructions.
+            </p>
+        </div>
+
+        <div class="info-box medical">
+            <div class="emoji">🩺</div>
+            <h3>Medical Assistance</h3>
+            <p>
+                Inform your House Parent or Activity Leader immediately if you feel unwell.
+            </p>
+        </div>
+
+        <div class="info-box contact">
+            <div class="emoji">👨‍🏫</div>
+            <h3>Need Help?</h3>
+            <p>
+                House Parents and Activity Leaders are always available to help you.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+DOWNLOAD
+======================================= -->
+
+<section class="download">
+
+    <h2>📄 Student Handbook</h2>
+
+    <p>
+
+        Prefer reading offline?
+
+        Download the Summer Camp Handbook in PDF format.
+
+    </p>
+
+    <a href="Summer_Camp_2026_Rules_and_Expectations.pdf" class="download-btn">
+
+        📥 Download PDF
+
+    </a>
+
+</section>
+
+<!-- =======================================
+FOOTER
+======================================= -->
 
 <footer>
 
-🏕️ Collège du Léman Summer Camp 2026
+    <h2>🏕 Collège du Léman</h2>
 
-<br><br>
+    <p>
 
-Made with ❤️ for our international community.
+        Summer Camp 2026
+
+    </p>
+
+    <p>
+
+        Together we create a safe, respectful and unforgettable international community.
+
+    </p>
+
+    <br>
+
+    <small>
+
+        © 2026 Collège du Léman Summer Camp
+
+    </small>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
